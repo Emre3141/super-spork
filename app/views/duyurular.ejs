@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" media="all" href="//static.zdassets.com/hc/assets/application-79172500fb4dbec2484043d570946543.css" id="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="//p23.zdassets.com/hc/theming_assets/678183/96508/style.css?digest=4401121344279">
+  <link rel="icon" href="https://cdn.discordapp.com/attachments/852684041211084810/863118109866983434/d50ee7c2acd99d0f608e147dd1553971.png">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <meta name="viepwort" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <meta name="description" content="En İyi Ve En Gelişmiş Kod Paylaşım Sitesidir. En İyi Desteği Sağlamak İçin Burdayız. ">
+        <meta name="og:site_name" content="Angel Squad">
+        <meta name="theme-color" content="#00A5FF" />
+        <meta name="title" content="Angel Squad" />
+        <meta name="robots" content="follow, index">
+  
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+  
+<body>
+  <title>Angel Squad</title>
+
+<div class="spinner-wrapper">
+<div class="spinner">
+<div>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve" width="30" height="30">
+<rect fill="#7289DA" width="15" height="15">
+<animateTransform attributeName="transform" attributeType="XML" type="translate" dur="1.7s" values="0,0;15,0;15,15;0,15;0,0;" repeatCount="indefinite" />
+</rect>
+<rect x="15" fill="#2C2F33" width="15" height="15">
+<animateTransform attributeName="transform" attributeType="XML" type="translate" dur="1.7s" values="0,0;0,15;-15,15;-15,0;0,0;" repeatCount="indefinite" />
+</rect>
+<rect x="15" y="15" fill="#7289DA" width="15" height="15">
+<animateTransform attributeName="transform" attributeType="XML" type="translate" dur="1.7s" values="0,0;-15,0;-15,-15;0,-15;0,0;" repeatCount="indefinite" />
+</rect>
+<rect y="15" fill="#2C2F33" width="15" height="15">
+<animateTransform attributeName="transform" attributeType="XML" type="translate" dur="1.7s" values="0,0;0,-15;15,-15;15,0;0,0;" repeatCount="indefinite" />
+</rect>
+</svg>
+</div>
+</div>
+</div>  
+  
+  
+  <main role="main">
+    
+     
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="/sunucu"><img class="sunucuLogo-2" style="width: 28px;" src="<%=client.guilds.cache.get(config.sunucuID).iconURL({dynamic:true,size:2048});%>" draggable="false"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Anasayfa</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/kodlar">Kodlar</a>
+          </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/sunucu">Discord</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+<!-- <center>
+<img class="sunucuLogo" src="<%=client.guilds.cache.get(config.sunucuID).iconURL({dynamic:true,size:2048});%>" draggable="false">
+  <br><br>
+<h1 style="color:white; font-family: Open Sans,sans-serif;">
+  Angel Squad
+  </h1>
+  <p style="color:white; font-family: Open Sans,sans-serif;">
+    <strong>En İyi Ve En Gelişmiş Kod Sunucusu.</strong>
+  </p>
+  <a class="button" href="/youtube"><i class="bi-youtube"></i><br>YouTube</a>
+  <a class="button" href="/kodlar"><i class="bi-code-slash"></i><br>Kodlar</a>
+</center> -->
+    
+    <div class="assagiindir">
+<% data.sort((x,y) => y.zaman - x.zaman).forEach((x) => { %>
+<% if(!x) return;%>
+      
+<div class="container-fluid">
+<div class="row mb-3">
+<div class="col-lg-4">
+<div class="card mb-3">
+<div draggable="false" class="card-body text-center shadow">
+<img draggable="false" class="rounded-circle mb-3 mt-4" src="<%=client.users.cache.get(x.author).displayAvatarURL({dynamic:true})%>" width="90" height="90">
+<div class="mb-3" style="color:white;"><a style="color:white;"><%=client.users.cache.get(x.author).tag%></a></div><br>
+<div class="mb-3" style="color:white;"><a style="color:white;"><%=moment(x.zaman).fromNow()%></a></div>
+</div>
+</div>
+</div>
+<div class="col">
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+<center>
+<h6 class="text-primary font-weight-bold m-0">Duyuru:</h6>
+</center>
+</div>
+<div class="card-body">
+<h4 class="small font-weight-bold" style="color: white;"><%=x.message%></h4>
+</span>
+</h4>
+</div>
+</div>
+</div>
+</div>
+</div><br><br>
+    <svg class="hr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"></path></defs><g class="parallax1"><use xlink:href="#gentle-wave" x="58" y="1" fill="#3F5FD5 "></use></g><g class="parallax2"><use xlink:href="#gentle-wave" x="65" y="4" fill="#3F5FD5 "></use></g><g class="parallax3"><use xlink:href="#gentle-wave" x="58" y="3" fill="#171A1F"></use></g></svg>  
+
+<% }); %>
+  </div>
+    
+<!-- 
+    
+  <svg class="hr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"></path></defs><g class="parallax1"><use xlink:href="#gentle-wave" x="58" y="1" fill="#3F5FD5 "></use></g><g class="parallax2"><use xlink:href="#gentle-wave" x="65" y="4" fill="#3F5FD5 "></use></g><g class="parallax3"><use xlink:href="#gentle-wave" x="58" y="3" fill="#171A1F"></use></g></svg>  
+    
+    
+<section class="category-grid">
+<ul class="flex-container">
+
+  <a href="/duyurular">
+<li class="flex-item known-issues">
+<h2>Duyurular</h2>
+<hr />
+<h3>Sunucuyla Veya Siteyle İlgili Haberkere Bakmak İçin Tıklayın.</h3>
+</li>
+</a>
+  
+    <a href="/s.s.s">
+<li class="flex-item faq">
+<h2>S.S.S</h2>
+<hr />
+<h3>Sıkça sorulan Sorulara Bakmak için Tıklayın. </h3>
+</li>
+</a>
+  
+  
+  
+  </ul>
+  </main> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+<script src="/js/js.js"></script>
+</body>  
+ 
+  
+</html>
